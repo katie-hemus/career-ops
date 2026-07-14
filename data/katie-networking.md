@@ -8,6 +8,13 @@ colleague.** That relationship — not the words of the recommendation — is he
 valuable career asset. This plan is built around converting it.
 Dates verified where noted; otherwise CONFIRM on the official site before booking.
 
+**Hard criteria (candidate-confirmed 2026-07-14 — see shortlist header):** salary floor
+**£95k+ GBP** (→ senior/principal/architect/leadership level, or contract day-rates),
+**fully remote strongly preferred** (on-site/hybrid = penalty), and **good work culture is a
+hard requirement** (culture-check + cap burnout-reputation shops). Steer warm intros toward
+people/employers that can meet this bar — a referral into a sub-£95k or bad-culture shop
+does not serve her.
+
 ## ⭐ Priority asset: the security-researcher recommendation → real referrals
 
 **What it is:** a public LinkedIn recommendation from a well-known PortSwigger security
