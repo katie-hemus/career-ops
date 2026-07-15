@@ -67,7 +67,7 @@
       "status": "live",
       "verified": true,
       "tier": "AI Lab",
-      "notes": "Strongest single match. \u00a3240K\u2013\u00a3390K published band. AI safety mission aligns with 'no toxic environments.' London office, report minimum 25% in-office. GenAI platform/MCP experience is the exact differentiator they value.",
+      "notes": "Strongest single match. \u00a3240K\u2013\u00a3390K published band. AI safety mission aligns with 'no toxic environments.' London office, report minimum 25% in-office. GenAI platform/MCP experience is the exact differentiator they value. WARM ALUMNI ROUTE: 3 University of York grads at Anthropic \u2014 Luke B. (Head of FDE International) is the power contact. Alumni messaging strategy: York -> engineering interest -> referral. He runs engineering; even if your target is pure Infra not FDE, he can route internally.",
       "equity": "Pre-IPO equity",
       "equityNotes": "Late-stage AI lab, ~$60B+ valuation. Equity could be life-changing if IPO materializes. MCP/gateway experience directly maps to Anthropic protocol."
     },
@@ -943,7 +943,8 @@
       "Hashicorp",
       "Datadog",
       "Darktrace",
-      "ElevenLabs"
+      "ElevenLabs",
+      "Anthropic"
     ],
     "details": {
       "ElevenLabs": {
@@ -966,6 +967,12 @@
       "Darktrace": {
         "name": "TBC",
         "status": "warm"
+      },
+      "Anthropic": {
+        "name": "Luke B. (Head of FDE International) + Laila Shaban (Research Recruiting) + George Papadofragkakis (Deal Strategy)",
+        "from": "University of York alumni network",
+        "status": "warm-alumni",
+        "priority": "Luke B. \u2014 runs FDE International, most strategic contact on the board. University of York = instant common ground."
       }
     },
     "note": "12+ years in UK tech scene. Direct contacts at these companies \u2014 referral route available. Full network mapping pending LinkedIn Connections.csv export."
