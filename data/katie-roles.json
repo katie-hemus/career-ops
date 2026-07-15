@@ -4,7 +4,7 @@
   "criteria": {
     "salaryFloor": 95000,
     "currency": "GBP",
-    "remotePreference": "fully-remote",
+    "remotePreference": "fully-remote-preferred-but-flexible-for-right-equity",
     "cultureMandatory": true,
     "targetTier": "FAANG + elite AI labs",
     "targetCompanies": [
@@ -35,10 +35,24 @@
       "Vercel",
       "Cognition (Devin)",
       "Weights & Biases",
-      "Modal Labs"
+      "Modal Labs",
+      "Databricks",
+      "Canva",
+      "Reddit",
+      "Palantir",
+      "Cloudflare",
+      "GitLab",
+      "Hashicorp",
+      "Confluent",
+      "Snowflake",
+      "Elastic",
+      "MongoDB"
     ],
     "prefersFAANG_AI": true,
-    "notes": "Targeting FAANG-level companies and elite AI labs only. Existing Grafana/Snyk/Wiz roles are adjacent but not primary targets. Focus on Platform/DevSecOps roles at top-tier AI companies where the AI PaaS/MCP experience is a differentiator."
+    "notes": "Targeting FAANG-level companies and elite AI labs only. Existing Grafana/Snyk/Wiz roles are adjacent but not primary targets. Focus on Platform/DevSecOps roles at top-tier AI companies where the AI PaaS/MCP experience is a differentiator.",
+    "equityRequired": true,
+    "wealthGoal": "Equity-driven \u2014 targeting RSUs at public companies or meaningful pre-IPO options at late-stage startups",
+    "equityNote": "Salary floor \u00a395k is secondary to total comp including equity. Open to strong base+equity packages even at slightly lower salary if equity is substantial (Series C+ with IPO path, or public-company RSUs). IR35 contracting dropped as primary track \u2014 no equity."
   },
   "lastScan": "2026-07-15",
   "roles": [
@@ -62,7 +76,9 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Strongest match \u2014 Staff level + fully remote + DevSecOps-adjacent (observability/reliability). Embedded SRE team in Mimir/Loki squads. High-SLA reliability, Go/K8s/AWS."
+      "notes": "Strongest match \u2014 Staff level + fully remote + DevSecOps-adjacent (observability/reliability). Embedded SRE team in Mimir/Loki squads. High-SLA reliability, Go/K8s/AWS.",
+      "equity": "RSUs",
+      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
     },
     {
       "id": "grafana-senior-swe-platform-infrasec",
@@ -84,7 +100,9 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Perfect DevSecOps title match. Platform + Infrastructure Security directly maps to Katie's skill set. Bottom of band sub-\u00a395k \u2014 negotiation needed but mid-to-top clears."
+      "notes": "Perfect DevSecOps title match. Platform + Infrastructure Security directly maps to Katie's skill set. Bottom of band sub-\u00a395k \u2014 negotiation needed but mid-to-top clears.",
+      "equity": "RSUs",
+      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
     },
     {
       "id": "grafana-senior-swe-databases-managed-services",
@@ -106,7 +124,9 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Less direct DevSecOps fit (data infrastructure focus) but strong platform/operations overlap. Go, Kubernetes, cloud."
+      "notes": "Less direct DevSecOps fit (data infrastructure focus) but strong platform/operations overlap. Go, Kubernetes, cloud.",
+      "equity": "RSUs",
+      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
     },
     {
       "id": "grafana-senior-swe-application-core-services",
@@ -128,7 +148,9 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Less direct platform/security fit, but strong engineering role. Multi-country EMEA scope."
+      "notes": "Less direct platform/security fit, but strong engineering role. Multi-country EMEA scope.",
+      "equity": "RSUs",
+      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
     },
     {
       "id": "snyk-senior-swe-data-infrastructure",
@@ -150,7 +172,9 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Kafka, Snowflake, Terraform, Go, AWS. Data platform focus rather than DevSecOps. No band published \u2014 typically \u00a385K\u2013\u00a3115K estimate."
+      "notes": "Kafka, Snowflake, Terraform, Go, AWS. Data platform focus rather than DevSecOps. No band published \u2014 typically \u00a385K\u2013\u00a3115K estimate.",
+      "equity": "Pre-IPO options",
+      "equityNotes": "Late-stage private, valued ~.5B. Options could be meaningful if IPO timeline is near."
     },
     {
       "id": "wiz-security-engineer-product-production-infra",
@@ -172,7 +196,9 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Strong DevSecOps match \u2014 threat modeling, K8s security, IaC, CNAPP, CSPM. UK band not published; US base $204K\u2013$281K but UK likely 20-30% lower."
+      "notes": "Strong DevSecOps match \u2014 threat modeling, K8s security, IaC, CNAPP, CSPM. UK band not published; US base $204K\u2013$281K but UK likely 20-30% lower.",
+      "equity": "Pre-IPO options",
+      "equityNotes": "Rapidly growing cloud security. 0B+ valuation. IPO widely expected."
     },
     {
       "id": "immersive-labs-senior-cloud-security-engineer",
@@ -194,7 +220,9 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Cloud security content creation + educational lab building. Not platform engineering \u2014 curriculum design. Likely sub-\u00a395k."
+      "notes": "Cloud security content creation + educational lab building. Not platform engineering \u2014 curriculum design. Likely sub-\u00a395k.",
+      "equity": null,
+      "equityNotes": null
     }
   ],
   "unverified": [],
