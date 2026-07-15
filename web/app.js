@@ -13,7 +13,7 @@
 
   /** Default hash for the shared password. Change this by setting the
    *  HASH attribute on the password-gate div, or via localStorage override. */
-  const DEFAULT_HASH = 'c6ceac439b57c451faed895a27d648a1bbef61e43e0dd818740c7e20c24e465d';
+  const DEFAULT_HASH = '7ff15882d4da0c935a77ae57b38f50362e4acc84a825d53fd5427452949bc580';
 
   const GATE = document.getElementById('password-gate');
   const DASH = document.getElementById('dashboard');
