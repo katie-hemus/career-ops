@@ -343,6 +343,16 @@ main {
   color: var(--charcoal-light);
 }
 
+.badge-inhouse {
+  background: #e6f4ea;
+  color: var(--green);
+}
+
+.badge-agency {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+
 .card-meta {
   display: flex;
   flex-wrap: wrap;
@@ -427,7 +437,8 @@ main {
 /* === Details sections === */
 .checked-empty,
 .dead-roles,
-.unverified-roles {
+.unverified-roles,
+.dropped-roles {
   margin-top: 1.5rem;
   background: var(--white);
   border: 1px solid var(--border);
@@ -436,9 +447,14 @@ main {
   box-shadow: var(--shadow-sm);
 }
 
+.dropped-roles {
+  border-left: 3px solid var(--red);
+}
+
 .checked-empty summary,
 .dead-roles summary,
-.unverified-roles summary {
+.unverified-roles summary,
+.dropped-roles summary {
   cursor: pointer;
   font-size: 0.88rem;
   font-weight: 600;
@@ -448,7 +464,8 @@ main {
 
 .checked-empty ul,
 .dead-roles ul,
-.unverified-roles ul {
+.unverified-roles ul,
+.dropped-roles ul {
   margin-top: 0.5rem;
   padding-left: 1.25rem;
   font-size: 0.85rem;
@@ -457,7 +474,8 @@ main {
 
 .checked-empty li,
 .dead-roles li,
-.unverified-roles li {
+.unverified-roles li,
+.dropped-roles li {
   margin-bottom: 0.35rem;
   line-height: 1.4;
 }

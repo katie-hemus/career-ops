@@ -11,39 +11,64 @@
    * Password gate — SHA-256 via SubtleCrypto
    * ================================================================ */
 
-  /** Default hash for the shared password. Change this by setting the
-   *  HASH attribute on the password-gate div, or via localStorage override. */
-  const DEFAULT_HASH = '7ff15882d4da0c935a77ae57b38f50362e4acc84a825d53fd5427452949bc580';
+  var DEFAULT_HASH = '7ff15882d4da0c935a77ae57b38f50362e4acc84a825d53fd5427452949bc580';
 
-  const GATE = document.getElementById('password-gate');
-  const DASH = document.getElementById('dashboard');
-  const FORM = document.getElementById('password-form');
-  const INPUT = document.getElementById('password-input');
-  const ERROR = document.getElementById('password-error');
-  const LOCK_BTN = document.getElementById('lock-btn');
+  var GATE = document.getElementById('password-gate');
+  var DASH = document.getElementById('dashboard');
+  var FORM = document.getElementById('password-form');
+  var INPUT = document.getElementById('password-input');
+  var ERROR = document.getElementById('password-error');
+  var LOCK_BTN = document.getElementById('lock-btn');
 
-  const HASH_KEY = 'career_ops_pw_hash';
-  const UNLOCKED_KEY = 'career_ops_unlocked';
+  var HASH_KEY = 'career_ops_hash';
+  var UNLOCKED_KEY = 'career_ops_unlocked';
+
+  console.log('Career Ops Dashboard: initializing');
+  console.log('Gate found:', !!GATE, 'Dash found:', !!DASH, 'Form found:', !!FORM);
 
   async function sha256(text) {
-    const enc = new TextEncoder().encode(text);
-    const buf = await crypto.subtle.digest('SHA-256', enc);
-    return Array.from(new Uint8Array(buf))
-      .map(b => b.toString(16).padStart(2, '0'))
-      .join('');
+    try {
+      var enc = new TextEncoder().encode(text);
+      var buf = await crypto.subtle.digest('SHA-256', enc);
+      return Array.from(new Uint8Array(buf))
+        .map(function (b) { return b.toString(16).padStart(2, '0'); })
+        .join('');
+    } catch (err) {
+      console.error('crypto.subtle failed:', err);
+      // Fallback: basic hash using string char codes (not secure, just for this gate)
+      return simpleHash(text);
+    }
+  }
+
+  function simpleHash(text) {
+    var h = 0;
+    for (var i = 0; i < text.length; i++) {
+      h = ((h << 5) - h) + text.charCodeAt(i);
+      h |= 0;
+    }
+    // Prefix so it's distinct from the real SHA-256
+    return 'simple_' + Math.abs(h).toString(16);
   }
 
   async function checkPassword(input) {
-    const expected = localStorage.getItem(HASH_KEY) || DEFAULT_HASH;
-    const actual = await sha256(input);
-    return actual === expected;
+    var expected = localStorage.getItem(HASH_KEY) || DEFAULT_HASH;
+    // If stored hash is a simple_ one, use simpleHash for comparison
+    if (expected.indexOf('simple_') === 0) {
+      return simpleHash(input) === expected;
+    }
+    try {
+      var actual = await sha256(input);
+      return actual === expected;
+    } catch (err) {
+      console.error('checkPassword error:', err);
+      return false;
+    }
   }
 
   function unlock() {
     GATE.classList.add('hidden');
     DASH.classList.remove('hidden');
     localStorage.setItem(UNLOCKED_KEY, '1');
-    // Load data after unlock so we're not fetching behind the gate forever
     loadDashboard();
   }
 
@@ -57,19 +82,26 @@
 
   FORM.addEventListener('submit', async function (e) {
     e.preventDefault();
-    const pw = INPUT.value.trim();
-    if (!pw) return;
-    const ok = await checkPassword(pw);
-    if (ok) {
-      unlock();
-    } else {
-      ERROR.textContent = 'Wrong password. Try again.';
-      INPUT.value = '';
-      INPUT.focus();
+    try {
+      var pw = INPUT.value.trim();
+      if (!pw) return;
+      var ok = await checkPassword(pw);
+      if (ok) {
+        unlock();
+      } else {
+        ERROR.textContent = 'Wrong password. Try again.';
+        INPUT.value = '';
+        INPUT.focus();
+      }
+    } catch (err) {
+      console.error('Form submit error:', err);
+      ERROR.textContent = 'Something went wrong. Check console for details.';
     }
   });
 
-  LOCK_BTN.addEventListener('click', lock);
+  if (LOCK_BTN) {
+    LOCK_BTN.addEventListener('click', lock);
+  }
 
   // Check if already unlocked
   if (localStorage.getItem(UNLOCKED_KEY) === '1') {
@@ -82,21 +114,21 @@
    * Data loading & rendering
    * ================================================================ */
 
-  const DATA_FILES = {
+  var DATA_FILES = {
     katie: 'data/katie-roles.json',
     claire: 'data/claire-roles.json'
   };
 
-  let currentTab = 'katie';
-  let currentData = null;
-  let cache = {};
+  var currentTab = 'katie';
+  var currentData = null;
+  var cache = {};
 
   async function loadData(person) {
     if (cache[person]) return cache[person];
     try {
-      const resp = await fetch(DATA_FILES[person]);
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      const data = await resp.json();
+      var resp = await fetch(DATA_FILES[person]);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      var data = await resp.json();
       cache[person] = data;
       return data;
     } catch (err) {
@@ -106,8 +138,8 @@
   }
 
   async function loadDashboard() {
-    const person = currentTab;
-    const data = await loadData(person);
+    var person = currentTab;
+    var data = await loadData(person);
     if (!data) {
       document.getElementById('role-cards').innerHTML =
         '<div class="empty-state"><p>Failed to load data. Check the console for details.</p></div>';
@@ -121,23 +153,20 @@
    * Rendering
    * ================================================================ */
 
-  /** Format salary for display */
   function fmtSalary(amount) {
     if (amount == null || amount === undefined) return null;
-    return '£' + amount.toLocaleString('en-GB');
+    return '\u00A3' + amount.toLocaleString('en-GB');
   }
 
   function salaryDisplay(role, criteria) {
-    const hasMin = role.salary.min != null;
-    const hasMax = role.salary.max != null;
+    var hasMin = role.salary.min != null;
+    var hasMax = role.salary.max != null;
     if (!hasMin && !hasMax) return { text: 'Unpublished', cls: '' };
     if (hasMin && hasMax) {
-      const minS = fmtSalary(role.salary.min);
-      const maxS = fmtSalary(role.salary.max);
-      return { text: `${minS} – ${maxS}`, cls: getSalaryCls(role, criteria) };
+      return { text: fmtSalary(role.salary.min) + ' \u2013 ' + fmtSalary(role.salary.max), cls: getSalaryCls(role, criteria) };
     }
-    if (hasMin) return { text: `From ${fmtSalary(role.salary.min)}`, cls: getSalaryCls(role, criteria) };
-    return { text: `Up to ${fmtSalary(role.salary.max)}`, cls: getSalaryCls(role, criteria) };
+    if (hasMin) return { text: 'From ' + fmtSalary(role.salary.min), cls: getSalaryCls(role, criteria) };
+    return { text: 'Up to ' + fmtSalary(role.salary.max), cls: getSalaryCls(role, criteria) };
   }
 
   function getSalaryCls(role, criteria) {
@@ -153,8 +182,8 @@
   function getSalaryBorderClass(role, criteria) {
     if (role.salaryClears === true) return 'salary-clears';
     if (!criteria || !criteria.salaryFloor) return '';
-    const min = role.salary.min;
-    const max = role.salary.max;
+    var min = role.salary.min;
+    var max = role.salary.max;
     if (min != null && max != null && min < criteria.salaryFloor && max >= criteria.salaryFloor) {
       return 'salary-borderline';
     }
@@ -173,90 +202,100 @@
   }
 
   function renderCard(role, criteria) {
-    const salary = salaryDisplay(role, criteria);
-    const borderCls = getSalaryBorderClass(role, criteria);
-    const fitCls = fitPillCls(role.fitScore);
-    const hasUrl = role.url && role.url.startsWith('http');
+    var salary = salaryDisplay(role, criteria);
+    var borderCls = getSalaryBorderClass(role, criteria);
+    var fitCls = fitPillCls(role.fitScore);
+    var hasUrl = role.url && role.url.indexOf('http') === 0;
 
-    let salaryIcon = '';
-    if (salary.cls === 'check') salaryIcon = '<span class="check">✓</span>';
-    else if (salary.cls === 'warn') salaryIcon = '<span class="warn">⚠</span>';
-    else if (salary.cls === 'cross') salaryIcon = '<span class="cross">✗</span>';
+    var salaryIcon = '';
+    if (salary.cls === 'check') salaryIcon = '<span class="check">\u2713</span>';
+    else if (salary.cls === 'warn') salaryIcon = '<span class="warn">\u26A0</span>';
+    else if (salary.cls === 'cross') salaryIcon = '<span class="cross">\u2717</span>';
 
-    let cultureHtml = '';
+    var cultureHtml = '';
     if (role.culture && role.culture.glassdoor != null) {
-      cultureHtml = `<span class="culture-badge">⭐ ${role.culture.glassdoor}</span>`;
+      cultureHtml = '<span class="culture-badge">\u2B50 ' + role.culture.glassdoor + '</span>';
     }
 
-    let notesHtml = '';
+    var inHouseHtml = '';
+    if (role.inHouse !== undefined) {
+      inHouseHtml = '<span class="badge ' + (role.inHouse ? 'badge-inhouse' : 'badge-agency') + '">' +
+        (role.inHouse ? '\uD83C\uDFE2 In-house' : '\uD83D\uDCE2 Agency') + '</span>';
+    }
+
+    var notesHtml = '';
     if (role.notes) {
-      notesHtml = `<p class="card-notes">${escHtml(role.notes)}</p>`;
+      notesHtml = '<p class="card-notes">' + escHtml(role.notes) + '</p>';
     }
 
-    let linkHtml = '';
+    var linkHtml = '';
     if (hasUrl) {
-      linkHtml = `<a href="${escAttr(role.url)}" class="card-link" target="_blank" rel="noopener">View Role →</a>`;
+      linkHtml = '<a href="' + escAttr(role.url) + '" class="card-link" target="_blank" rel="noopener">View Role \u2192</a>';
     }
 
-    return `
-      <div class="role-card ${borderCls}">
-        <div class="card-header">
-          <span class="card-company">${escHtml(role.company)}</span>
-          <span class="fit-pill ${fitCls}">${role.fitScore != null ? role.fitScore.toFixed(1) : '?'}</span>
-        </div>
-        <p class="card-title">${escHtml(role.title)}</p>
-        <div class="badges">
-          <span class="badge badge-level">${escHtml(role.level)}</span>
-          <span class="badge badge-location">${escHtml(role.location)}</span>
-        </div>
-        <div class="card-meta">
-          <span class="salary-band">${salaryIcon} ${escHtml(salary.text)}</span>
-          ${cultureHtml}
-        </div>
-        ${notesHtml}
-        ${linkHtml}
-      </div>`;
+    return '<div class="role-card ' + borderCls + '">' +
+      '<div class="card-header">' +
+        '<span class="card-company">' + escHtml(role.company) + '</span>' +
+        '<span class="fit-pill ' + fitCls + '">' + (role.fitScore != null ? role.fitScore.toFixed(1) : '?') + '</span>' +
+      '</div>' +
+      '<p class="card-title">' + escHtml(role.title) + '</p>' +
+      '<div class="badges">' +
+        '<span class="badge badge-level">' + escHtml(role.level) + '</span>' +
+        '<span class="badge badge-location">' + escHtml(role.location) + '</span>' +
+        inHouseHtml +
+      '</div>' +
+      '<div class="card-meta">' +
+        '<span class="salary-band">' + salaryIcon + ' ' + escHtml(salary.text) + '</span>' +
+        cultureHtml +
+      '</div>' +
+      notesHtml +
+      linkHtml +
+    '</div>';
   }
 
   function renderProfileBar(data) {
-    const c = data.candidate || 'Unknown';
-    const p = data.profile || '';
-    const crit = data.criteria || {};
+    var c = data.candidate || 'Unknown';
+    var p = data.profile || '';
+    var crit = data.criteria || {};
 
-    let criteriaHtml = '';
+    var criteriaHtml = '';
     if (crit.salaryFloor) {
-      criteriaHtml += `<span><span class="icon">💰</span> £${crit.salaryFloor.toLocaleString()}+ ${crit.currency || 'GBP'}</span>`;
+      criteriaHtml += '<span><span class="icon">\uD83D\uDCB0</span> \u00A3' + crit.salaryFloor.toLocaleString() + '+ ' + (crit.currency || 'GBP') + '</span>';
     }
     if (crit.remotePreference) {
-      const icon = crit.remotePreference === 'fully-remote' ? '🏠' : '🏢';
-      criteriaHtml += `<span><span class="icon">${icon}</span> ${formatPref(crit.remotePreference)}</span>`;
+      var icon = crit.remotePreference === 'fully-remote' ? '\uD83C\uDFE0' : '\uD83C\uDFE2';
+      criteriaHtml += '<span><span class="icon">' + icon + '</span> ' + formatPref(crit.remotePreference) + '</span>';
+    }
+    if (crit.prefersInHouse) {
+      criteriaHtml += '<span><span class="icon">\uD83C\uDFE2</span> Prefers in-house</span>';
     }
     if (crit.cultureMandatory) {
-      criteriaHtml += `<span><span class="icon">🛡️</span> Culture check</span>`;
+      criteriaHtml += '<span><span class="icon">\uD83D\uDEE1\uFE0F</span> Culture check</span>';
     }
 
-    return `
-      <span class="name">${escHtml(c)}</span>
-      <span class="profile-tag">${escHtml(p)}</span>
-      <div class="criteria">${criteriaHtml}</div>`;
+    return '<span class="name">' + escHtml(c) + '</span>' +
+      '<span class="profile-tag">' + escHtml(p) + '</span>' +
+      '<div class="criteria">' + criteriaHtml + '</div>';
   }
 
   function formatPref(pref) {
     if (pref === 'fully-remote') return 'Fully remote';
     if (pref === 'hybrid-london') return 'Hybrid London';
+    if (pref === 'hybrid-manchester-or-fully-remote') return 'Hybrid Manchester / Remote';
     return pref;
   }
 
   function populateCompanyFilter(data) {
-    const select = document.getElementById('filter-company');
-    const currentVal = select.value;
-    const companies = new Set();
-    (data.roles || []).forEach(r => companies.add(r.company));
-    (data.unverified || []).forEach(r => { if (r.company) companies.add(r.company); });
+    var select = document.getElementById('filter-company');
+    var currentVal = select.value;
+    var companies = {};
+    (data.roles || []).forEach(function (r) { companies[r.company] = true; });
+    (data.unverified || []).forEach(function (r) { if (r.company) companies[r.company] = true; });
+    (data.dropped || []).forEach(function (r) { if (r.company) companies[r.company] = true; });
 
     select.innerHTML = '<option value="">All</option>';
-    Array.from(companies).sort().forEach(c => {
-      const opt = document.createElement('option');
+    Object.keys(companies).sort().forEach(function (c) {
+      var opt = document.createElement('option');
       opt.value = c;
       opt.textContent = c;
       select.appendChild(opt);
@@ -265,14 +304,14 @@
   }
 
   function applyFilters(data) {
-    const salaryOnly = document.getElementById('filter-salary').checked;
-    const minFit = parseFloat(document.getElementById('filter-fitscore').value) || 0;
-    const company = document.getElementById('filter-company').value;
-    const criteria = data.criteria || {};
+    var salaryOnly = document.getElementById('filter-salary').checked;
+    var minFit = parseFloat(document.getElementById('filter-fitscore').value) || 0;
+    var company = document.getElementById('filter-company').value;
+    var criteria = data.criteria || {};
 
-    let roles = data.roles || [];
+    var roles = (data.roles || []).slice();
     if (salaryOnly) {
-      roles = roles.filter(r => {
+      roles = roles.filter(function (r) {
         if (r.salaryClears === true) return true;
         if (criteria.salaryFloor && r.salary.min != null && r.salary.max != null) {
           return r.salary.max >= criteria.salaryFloor;
@@ -281,78 +320,77 @@
       });
     }
     if (minFit > 0) {
-      roles = roles.filter(r => r.fitScore != null && r.fitScore >= minFit);
+      roles = roles.filter(function (r) { return r.fitScore != null && r.fitScore >= minFit; });
     }
     if (company) {
-      roles = roles.filter(r => r.company === company);
+      roles = roles.filter(function (r) { return r.company === company; });
     }
 
-    // Sort by fit score desc
-    roles.sort((a, b) => (b.fitScore || 0) - (a.fitScore || 0));
-
+    roles.sort(function (a, b) { return (b.fitScore || 0) - (a.fitScore || 0); });
     return roles;
   }
 
   function renderAll(data) {
-    // Profile bar
     document.getElementById('candidate-profile').innerHTML = renderProfileBar(data);
-
-    // Company filter
     populateCompanyFilter(data);
 
-    // Filter and render cards
-    const roles = applyFilters(data);
-    const grid = document.getElementById('role-cards');
-    const criteria = data.criteria || {};
+    var roles = applyFilters(data);
+    var grid = document.getElementById('role-cards');
+    var criteria = data.criteria || {};
 
     if (roles.length === 0) {
       grid.innerHTML = '';
       document.getElementById('empty-state').classList.remove('hidden');
     } else {
       document.getElementById('empty-state').classList.add('hidden');
-      grid.innerHTML = roles.map(r => renderCard(r, criteria)).join('');
+      grid.innerHTML = roles.map(function (r) { return renderCard(r, criteria); }).join('');
     }
 
-    document.getElementById('role-count').textContent = `${roles.length} role${roles.length !== 1 ? 's' : ''}`;
+    document.getElementById('role-count').textContent = roles.length + ' role' + (roles.length !== 1 ? 's' : '');
 
     // Checked-empty
-    const checked = data.checkedEmpty || [];
+    var checked = data.checkedEmpty || [];
     document.getElementById('checked-count').textContent = checked.length;
-    document.getElementById('checked-list').innerHTML = checked.map(c =>
-      `<li><strong>${escHtml(c.company)}</strong> — ${escHtml(c.detail)}</li>`
-    ).join('');
-    if (checked.length === 0) {
-      document.querySelector('.checked-empty').classList.add('hidden');
-    } else {
-      document.querySelector('.checked-empty').classList.remove('hidden');
-    }
+    document.getElementById('checked-list').innerHTML = checked.map(function (c) {
+      return '<li><strong>' + escHtml(c.company) + '</strong> \u2014 ' + escHtml(c.detail) + '</li>';
+    }).join('');
+    var ceSection = document.querySelector('.checked-empty');
+    if (ceSection) ceSection.classList.toggle('hidden', checked.length === 0);
 
     // Dead
-    const dead = data.dead || [];
-    document.getElementById('dead-count').textContent = dead.length;
-    document.getElementById('dead-list').innerHTML = dead.map(r =>
-      `<li><strong>${escHtml(r.company)}</strong> — ${escHtml(r.title)} (${escHtml(r.notes || 'Closed')})</li>`
-    ).join('');
-    if (dead.length === 0) {
-      document.getElementById('dead-section').classList.add('hidden');
-    } else {
-      document.getElementById('dead-section').classList.remove('hidden');
+    var dead = data.dead || [];
+    var ds = document.getElementById('dead-section');
+    if (ds) {
+      document.getElementById('dead-count').textContent = dead.length;
+      document.getElementById('dead-list').innerHTML = dead.map(function (r) {
+        return '<li><strong>' + escHtml(r.company) + '</strong> \u2014 ' + escHtml(r.title) + ' (' + escHtml(r.notes || 'Closed') + ')</li>';
+      }).join('');
+      ds.classList.toggle('hidden', dead.length === 0);
     }
 
     // Unverified
-    const unver = data.unverified || [];
-    document.getElementById('unverified-count').textContent = unver.length;
-    document.getElementById('unverified-list').innerHTML = unver.map(r =>
-      `<li><strong>${escHtml(r.company)}</strong> — ${escHtml(r.title)}: ${escHtml(r.notes || 'Unverified')}</li>`
-    ).join('');
-    if (unver.length === 0) {
-      document.getElementById('unverified-section').classList.add('hidden');
-    } else {
-      document.getElementById('unverified-section').classList.remove('hidden');
+    var unver = data.unverified || [];
+    var us = document.getElementById('unverified-section');
+    if (us) {
+      document.getElementById('unverified-count').textContent = unver.length;
+      document.getElementById('unverified-list').innerHTML = unver.map(function (r) {
+        return '<li><strong>' + escHtml(r.company) + '</strong> \u2014 ' + escHtml(r.title) + ': ' + escHtml(r.notes || 'Unverified') + '</li>';
+      }).join('');
+      us.classList.toggle('hidden', unver.length === 0);
     }
 
-    // Footer
-    document.getElementById('last-scan').textContent = data.lastScan || '—';
+    // Dropped
+    var dropped = data.dropped || [];
+    var dropSection = document.getElementById('dropped-section');
+    if (dropSection) {
+      document.getElementById('dropped-count').textContent = dropped.length;
+      document.getElementById('dropped-list').innerHTML = dropped.map(function (r) {
+        return '<li><strong>' + escHtml(r.company) + '</strong> \u2014 ' + escHtml(r.title) + ': ' + escHtml(r.reason || '') + '</li>';
+      }).join('');
+      dropSection.classList.toggle('hidden', dropped.length === 0);
+    }
+
+    document.getElementById('last-scan').textContent = data.lastScan || '\u2014';
   }
 
   /* ================================================================
@@ -360,19 +398,17 @@
    * ================================================================ */
 
   document.getElementById('tab-nav').addEventListener('click', function (e) {
-    const btn = e.target.closest('.tab');
+    var btn = e.target.closest('.tab');
     if (!btn) return;
-    const tab = btn.dataset.tab;
+    var tab = btn.dataset.tab;
     if (tab === currentTab) return;
 
-    // Update active state
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
     btn.classList.add('active');
 
     currentTab = tab;
     currentData = null;
 
-    // Reset filters
     document.getElementById('filter-salary').checked = false;
     document.getElementById('filter-fitscore').value = '0';
     document.getElementById('filter-company').value = '';
@@ -386,19 +422,18 @@
 
   function onFilterChange() {
     if (!currentData) return;
-    // Re-populate role-cards only; profile bar stays
-    const roles = applyFilters(currentData);
-    const grid = document.getElementById('role-cards');
-    const criteria = currentData.criteria || {};
+    var roles = applyFilters(currentData);
+    var grid = document.getElementById('role-cards');
+    var criteria = currentData.criteria || {};
 
     if (roles.length === 0) {
       grid.innerHTML = '';
       document.getElementById('empty-state').classList.remove('hidden');
     } else {
       document.getElementById('empty-state').classList.add('hidden');
-      grid.innerHTML = roles.map(r => renderCard(r, criteria)).join('');
+      grid.innerHTML = roles.map(function (r) { return renderCard(r, criteria); }).join('');
     }
-    document.getElementById('role-count').textContent = `${roles.length} role${roles.length !== 1 ? 's' : ''}`;
+    document.getElementById('role-count').textContent = roles.length + ' role' + (roles.length !== 1 ? 's' : '');
   }
 
   document.getElementById('filter-salary').addEventListener('change', onFilterChange);
@@ -411,7 +446,7 @@
 
   function escHtml(str) {
     if (!str) return '';
-    const div = document.createElement('div');
+    var div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
