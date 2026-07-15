@@ -1,0 +1,16 @@
+{
+  "candidate": "Jonny Jamison",
+  "profile": "Senior Software Engineer",
+  "criteria": {
+    "salaryFloor": 90000,
+    "currency": "GBP",
+    "remotePreference": "flexible",
+    "location": "London"
+  },
+  "roles": [],
+  "checkedEmpty": [],
+  "dead": [],
+  "unverified": [],
+  "dropped": [],
+  "lastScan": "2026-07-15 (scan in progress)"
+}

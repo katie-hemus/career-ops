@@ -116,7 +116,8 @@
 
   var DATA_FILES = {
     katie: 'data/katie-roles.json',
-    claire: 'data/claire-roles.json'
+    claire: 'data/claire-roles.json',
+    jonny: 'data/jonny-roles.json'
   };
 
   var currentTab = 'katie';
