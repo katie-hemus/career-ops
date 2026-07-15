@@ -6,12 +6,16 @@
 - **Salary floor:** £90k+
 - **Branch:** `jonny-jamison`
 
+## Profile
+- Oxford MMathPhys (Distinction, top of cohort) + BA Physics (1st Class, top 10%)
+- 5 years at PortSwigger as Senior Software Engineer (Jan 2021 – Dec 2025)
+- Prior: Sagentia Innovation (Summer Analyst), BAE Systems (Engineering Intern)
+- Shared PortSwigger tenure with Katie (Mar 2023 – Jun 2025)
+
 ## Criteria (to confirm)
-- Stack / languages:
-- Current role / company:
-- Years of experience:
-- Industry preference:
-- Company size preference:
-- Equity requirement:
-- Culture / red lines:
-- Anything else:
+- Stack / languages: TBC — likely Java/Spring (Burp Suite) but needs confirmation
+- Industry preference: TBC
+- Company size preference: TBC
+- Equity requirement: TBC
+- Culture / red lines: TBC — does PortSwigger veto apply to him too?
+- Notice period / availability: TBC
