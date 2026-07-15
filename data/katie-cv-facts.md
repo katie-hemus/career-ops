@@ -64,3 +64,24 @@ These facts supersede the ASSUMED items in katie-shortlist.md and answer open qu
 - CV positioning gap: title says "DevOps Engineer" while the market band she wants pays for
   "Platform Engineer / DevSecOps / staff" — retitle per application; content already
   supports it.
+
+## Existing assets we can reuse (found 2026-07-15)
+
+- **Live site: https://sushiroll.io** — FDSE-positioned personal site (React, dark
+  terminal aesthetic), served from this box (:8090 behind Caddy/TLS). Source:
+  workspace projects/fdse-site/. Includes /recruiters.txt, /llms.txt, /humans.txt —
+  a recruiter/AI-screener fast path. Built June 2026.
+- **CV tooling:** this repo has templates/cv-template.tex + cv-template.html and the
+  latex/pdf modes — we can generate tailored per-application CVs from katie-cv-facts.md.
+
+### ⚠️ BLOCKER: site content contradicts the Katie CV — must reconcile before applying
+The Katie CV lists https://sushiroll.io/ as a link, but the live site describes a
+DIFFERENT career history (from the anonymised CV pasted June 2026):
+- Site: BSc Digital & Tech Solutions apprenticeship 2019-2022; Data Engineer 2019-22;
+  GCP enterprise 2022-23; AWS DevOps 2023-25; "NOW: Sabbatical"; GCP-heavy certs.
+- Katie CV: BA Philosophy (York) + law diploma; Co-op/ITV/Booking 2017-18; own
+  consultancy 2018-present; PortSwigger 2023-25; NOW: Senior Platform Engineer @ Civica.
+Any recruiter who follows the CV link will see mismatched education, timeline, and
+availability. DO NOT send applications linking the site until Incognito decides which
+history is canonical and the site (recruiters.txt/llms.txt/site copy) is aligned.
+Site edits are public-facing → Incognito approval gate applies.
