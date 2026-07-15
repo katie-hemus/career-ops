@@ -138,18 +138,16 @@ roles in Manchester — noted but off-profile for a platform/DevSecOps engineer.
   both fit AND salary**, ahead of the NCC anchor. **Action: scan Snyk board directly, filter
   for senior+ level, culture-check (Glassdoor), set alert.**
 
-### 6. PortSwigger — boomerang / warm-network option (Knutsford; careers page live)
-- https://portswigger.net/careers (roles JS-rendered; not individually verifiable today)
-- **Why:** she's an alum with an insider referral network (incl. the researcher who
-  recommended her). A returning platform/infra hire is the highest-probability warm route.
-  Ethics OK — PortSwigger is her *former employer*, not a career-ops client; this is
-  re-connecting, not poaching. Culture (per their careers page): small, high-bar,
-  "nerdy about tech," explicitly "no arseholes" — **strong signal against her hard culture
-  requirement (a plus).** **Two caveats under v2 criteria:** (a) Knutsford base means roles
-  are likely **on-site/hybrid → location penalty** vs fully-remote (confirm remote policy);
-  (b) confirm a senior PortSwigger platform band **clears £95k** before prioritising over
-  Snyk. Still the highest-probability *warm* route. **Action: check current openings (level +
-  remote policy + band) + tap her network (see networking file).**
+### 6. PortSwigger — ❌ REMOVED (candidate veto, 2026-07-15)
+- **Hard no from the candidate: bad exit, culture was really toxic.** Do not shortlist
+  PortSwigger roles, do not pitch a boomerang, do not treat their careers page as a target.
+- ⚠️ Calibration lesson: their careers page says "no arseholes" — candidate experience says
+  otherwise. **Never take employer-published culture pages as culture evidence**; weight
+  insider accounts, Glassdoor patterns, and the candidate's own testimony.
+- Her PortSwigger *work* (AI PaaS, platform lead scope) stays front-and-centre on the CV —
+  the achievements are real; only the employer is off the table.
+- Interview prep: prepare a neutral leaving narrative before any interviews (e.g. "delivered
+  the AI platform, wanted staff-scope + remote"), never criticise them in-process.
 
 ### 7. Other cloud-native security scale-ups to scan (remote-UK friendly)
 - Aikido Security, Wiz, Datadog (Security/Cloud SIEM), Grafana Labs, WithSecure, Sophos

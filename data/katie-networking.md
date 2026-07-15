@@ -54,9 +54,13 @@ let the referral open the door and the recommendation reassure the human who rea
   alumni. Ex-PortSwigger engineers are scattered across UK security firms — each is a
   potential referrer. Action: map 8–10 former colleagues she's still on good terms with;
   reconnect (coffee/DM), ask for intel on who's hiring platform/DevSecOps people.
-- A **boomerang to PortSwigger itself** is the single highest-probability warm route (see
-  shortlist #6). Culture is small, high-bar, engineering-led — exactly where a personal
-  vouch matters most.
+- ❌ **Boomerang to PortSwigger: VETOED (2026-07-15).** Bad exit, toxic culture — hard no
+  from the candidate. Remove PortSwigger-the-employer from every play in this file.
+- ⚠️ **Network caution:** the alumni/recommender plays above assume warm PortSwigger
+  relationships. With a bad exit, CONFIRM WITH KATIE which relationships survived before any
+  outreach — including whether the researcher-recommender is still friendly. Alumni who have
+  also *left* may be the warmest contacts of all (shared experience), but let her name who
+  is safe. No outreach on her behalf without her explicit per-person OK.
 
 ## Priority events & communities (cyber + DevSecOps, NW England / remote)
 

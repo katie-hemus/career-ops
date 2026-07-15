@@ -61,6 +61,11 @@ These facts supersede the ASSUMED items in katie-shortlist.md and answer open qu
   longer seniority-gated on our side (still confirm remote-flex). Snyk staff/senior remains
   #1 on fit+comp. Contract outside-IR35 remains the comp ceiling but she may prefer perm
   stability having just moved — ask her.
+- ❌ **PortSwigger VETOED (Incognito, 2026-07-15): bad exit, toxic culture. Hard no** — no
+  roles, no boomerang, no unvetted outreach to that network (confirm surviving relationships
+  with Katie person-by-person first). The PortSwigger *achievements* stay on the CV; prep a
+  neutral leaving narrative for interviews. Culture lesson: never trust employer-published
+  culture pages — her hard culture requirement is grounded in direct experience there.
 - CV positioning gap: title says "DevOps Engineer" while the market band she wants pays for
   "Platform Engineer / DevSecOps / staff" — retitle per application; content already
   supports it.
