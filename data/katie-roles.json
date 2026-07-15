@@ -46,7 +46,8 @@
       "Confluent",
       "Snowflake",
       "Elastic",
-      "MongoDB"
+      "MongoDB",
+      "Darktrace"
     ],
     "prefersFAANG_AI": true,
     "notes": "Targeting FAANG-level companies and elite AI labs only. Existing Grafana/Snyk/Wiz roles are adjacent but not primary targets. Focus on Platform/DevSecOps roles at top-tier AI companies where the AI PaaS/MCP experience is a differentiator.",
@@ -280,5 +281,14 @@
       "company": "Aikido Security",
       "detail": "No results for UK platform/DevSecOps roles."
     }
-  ]
+  ],
+  "contacts": {
+    "known": [
+      "AWS",
+      "Hashicorp",
+      "Datadog",
+      "Darktrace"
+    ],
+    "note": "12+ years in UK tech scene. Has direct contacts at these companies \u2014 referral route available. Full network mapping pending LinkedIn Connections.csv export."
+  }
 }
