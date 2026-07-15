@@ -4,13 +4,14 @@
   "criteria": {
     "salaryFloor": 95000,
     "currency": "GBP",
-    "remotePreference": "fully-remote-preferred-but-flexible-for-right-equity",
+    "remotePreference": "fully-remote",
     "cultureMandatory": true,
     "targetTier": "FAANG + elite AI labs",
     "targetCompanies": [
-      "OpenAI",
       "Anthropic",
-      "Sakana AI",
+      "OpenAI",
+      "ElevenLabs",
+      "Replit",
       "Google DeepMind",
       "Meta",
       "Amazon/AWS",
@@ -21,42 +22,361 @@
       "Mistral",
       "Stability AI",
       "xAI",
-      "ElevenLabs",
       "Hugging Face",
       "Notion",
       "Figma",
       "Stripe",
-      "Scale AI",
       "Perplexity",
+      "Scale AI",
       "Runway",
       "Midjourney",
       "Cursor/Anysphere",
-      "Replit",
       "Vercel",
       "Cognition (Devin)",
       "Weights & Biases",
       "Modal Labs",
-      "Databricks",
-      "Canva",
-      "Reddit",
-      "Palantir",
-      "Cloudflare",
-      "GitLab",
-      "Hashicorp",
-      "Confluent",
-      "Snowflake",
-      "Elastic",
-      "MongoDB",
-      "Darktrace"
+      "Sakana AI",
+      "Snyk",
+      "Wiz",
+      "Grafana Labs",
+      "Immersive Labs"
     ],
     "prefersFAANG_AI": true,
-    "notes": "Targeting FAANG-level companies and elite AI labs only. Existing Grafana/Snyk/Wiz roles are adjacent but not primary targets. Focus on Platform/DevSecOps roles at top-tier AI companies where the AI PaaS/MCP experience is a differentiator.",
-    "equityRequired": true,
-    "wealthGoal": "Equity-driven \u2014 targeting RSUs at public companies or meaningful pre-IPO options at late-stage startups",
-    "equityNote": "Salary floor \u00a395k is secondary to total comp including equity. Open to strong base+equity packages even at slightly lower salary if equity is substantial (Series C+ with IPO path, or public-company RSUs). IR35 contracting dropped as primary track \u2014 no equity."
+    "notes": "Targeting FAANG-level companies and elite AI labs primarily. Existing Grafana/Snyk/Wiz roles kept as adjacent. Focus on Platform/DevSecOps roles where the AI PaaS/MCP experience is a differentiator."
   },
   "lastScan": "2026-07-15",
   "roles": [
+    {
+      "id": "anthropic-swe-infrastructure-all-levels",
+      "company": "Anthropic",
+      "title": "Software Engineer, Infrastructure (All Levels)",
+      "level": "Senior \u2192 Staff",
+      "location": "London (hybrid, min 25% office)",
+      "salary": {
+        "min": 240000,
+        "max": 390000,
+        "published": true
+      },
+      "url": "https://www.anthropic.com/careers",
+      "fitScore": 9.5,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.4,
+        "notes": "Mission-driven, high-trust/low-ego, 93% CEO approval, top compensation in AI sector. WLB 3.7 \u2014 intense but compensated. Claude writes 80%+ production code internally."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "Strongest single match. \u00a3240K\u2013\u00a3390K published band. AI safety mission aligns with 'no toxic environments.' London office, report minimum 25% in-office. GenAI platform/MCP experience is the exact differentiator they value.",
+      "equity": "Pre-IPO equity",
+      "equityNotes": "Late-stage AI lab, ~$60B+ valuation. Equity could be life-changing if IPO materializes. MCP/gateway experience directly maps to Anthropic protocol."
+    },
+    {
+      "id": "openai-principal-infrasec",
+      "company": "OpenAI",
+      "title": "Principal Security Engineer, Infrastructure Security",
+      "level": "Principal",
+      "location": "London (4 locations incl. London)",
+      "salary": {
+        "min": 180000,
+        "max": 350000,
+        "published": false
+      },
+      "url": "https://openai.com/careers",
+      "fitScore": 9.0,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.1,
+        "notes": "Excellent comp (4.6), smart colleagues, WLB 3.2 is the pain point. Principal roles may have more autonomy to set boundaries. Leadership turmoil mostly settled post-2024."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "Owns end-to-end security outcomes for critical infra including GPU clusters. Requires track record of large cross-org initiatives \u2014 Katie's Tech Lead (PortSwigger) + GenAI platform build qualifies. 4-location role includes London.",
+      "equity": "Pre-IPO equity + tender",
+      "equityNotes": "~$300B+ valuation. Regular tender events let employees sell. Potentially 7-figure equity."
+    },
+    {
+      "id": "openai-swe-infrastructure-security",
+      "company": "OpenAI",
+      "title": "Software Engineer, Infrastructure Security",
+      "level": "Senior",
+      "location": "London (4 locations incl. London)",
+      "salary": {
+        "min": 150000,
+        "max": 300000,
+        "published": false
+      },
+      "url": "https://openai.com/careers",
+      "fitScore": 9.0,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.1,
+        "notes": "InfraSec team protects GPU supercomputing clusters, multi-cloud infra, CI/CD, K8s. Direct DevSecOps map."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "Python/Go/Rust, cloud platforms, K8s, auth standards (OIDC, mTLS, SPIFFE). Katie's AI PaaS/MCP server experience is a strong differentiator for this team.",
+      "equity": "Pre-IPO equity + tender",
+      "equityNotes": "~$300B+ valuation. Regular tender events let employees sell. Potentially 7-figure equity."
+    },
+    {
+      "id": "elevenlabs-infrastructure-security-engineer",
+      "company": "ElevenLabs",
+      "title": "Infrastructure Security Engineer",
+      "level": "Senior",
+      "location": "Remote (global); GMT to GMT+3 or UK preferred",
+      "salary": {
+        "min": 120000,
+        "max": 180000,
+        "published": false
+      },
+      "url": "https://elevenlabs.io/careers/687394d7-fbf8-49ed-822e-c0690191330c/infrastructure-security-engineer",
+      "fitScore": 8.5,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.2,
+        "notes": "Remote-first, zero job titles, extreme autonomy, innovative (95/100). UK timezone-preferred. Direct feedback style. 76% recommend."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "Perfect DevSecOps title match. UK timezone-preferred \u2014 Manchester-remote fits. Cloud-native security, CI/CD, supply chain, K8s, Terraform. AI/ML security bonus maps to GenAI platform. Core hours 2pm-6pm GMT.",
+      "equity": "Pre-IPO options",
+      "equityNotes": "Fast-growing AI audio unicorn. Early enough for meaningful equity, late enough for near-term liquidity."
+    },
+    {
+      "id": "replit-staff-sre",
+      "company": "Replit",
+      "title": "Staff Site Reliability Engineer",
+      "level": "Staff",
+      "location": "Remote Europe (UK, France, Ireland, Italy, Netherlands)",
+      "salary": {
+        "min": 130000,
+        "max": 180000,
+        "published": false
+      },
+      "url": "https://jobs.ashbyhq.com/replit",
+      "fitScore": 8.0,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.1,
+        "notes": "High-agency, high-intensity. 'Work with intensity' and 'Seek pain' operating principles. Remote-first with quarterly offsites. 82% recommend."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "Fully remote Europe incl. UK. Rare Staff SRE title. 'SRE Agentmaxxing' (AI agents eliminating toil) maps to MCP/agent workflow expertise. Python/Go, K8s, Terraform/Pulumi, GCP, Prometheus/Grafana. 8-10 yr exp requirement.",
+      "equity": "Pre-IPO options",
+      "equityNotes": "AI-powered dev platform, $1.6B+ valuation. Growing fast."
+    },
+    {
+      "id": "perplexity-mts-cloud-infrastructure",
+      "company": "Perplexity",
+      "title": "Member of Technical Staff, Cloud Infrastructure",
+      "level": "Senior+",
+      "location": "London",
+      "salary": {
+        "min": 150000,
+        "max": 250000,
+        "published": false
+      },
+      "url": "https://jobs.ashbyhq.com/perplexity",
+      "fitScore": 7.5,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.6,
+        "notes": "Exceptional overall satisfaction. Small team, massive impact. CEO deeply technical. 90% recommend. Startup intensity."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "Platform & Infrastructure team. K8s clusters for AI model inference/training, Slurm HPC, AWS. 174+ applicants \u2014 high competition but Katie's AI platform experience is a differentiator.",
+      "equity": "Pre-IPO options",
+      "equityNotes": "AI search, $9B+ valuation. Competitive with Google. High upside."
+    },
+    {
+      "id": "stripe-staff-swe-service-platform",
+      "company": "Stripe",
+      "title": "Staff Software Engineer, Service Platform",
+      "level": "Staff",
+      "location": "Dublin primarily; UK eligible upon inquiry",
+      "salary": {
+        "min": 115000,
+        "max": 190000,
+        "published": true
+      },
+      "url": "https://stripe.com/jobs",
+      "fitScore": 7.0,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.0,
+        "notes": "Engineering-driven, transparent, strong comp & equity. 50% in-office policy. Public company stability."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "Adjacent Elite Tech",
+      "notes": "Service frameworks, deployment, load balancers, Kafka, K8s, databases. \u20ac132K\u2013\u20ac198K published for Dublin; UK likely similar. Need to verify UK eligibility \u2014 primary listing is Dublin.",
+      "equity": "RSUs (public-company equivalent)",
+      "equityNotes": "Late-stage private, ~$70B+. Regular secondary events for employees."
+    },
+    {
+      "id": "figma-swe-production-engineering",
+      "company": "Figma",
+      "title": "Software Engineer, Production Engineering",
+      "level": "Senior",
+      "location": "London (hybrid; not fully remote)",
+      "salary": {
+        "min": 100000,
+        "max": 150000,
+        "published": false
+      },
+      "url": "https://www.figma.com/careers",
+      "fitScore": 7.0,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 3.7,
+        "notes": "WLB 3.0 is major concern (60+ hr weeks near deadlines). 95% CEO approval. Post-IPO stock down 83% \u2014 good RSU cost basis for new hires."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "Adjacent Elite Tech",
+      "notes": "Production Engineering = SRE at Figma. AWS, distributed systems, operational security, 5+ years at scale. London-hub based, not fully remote. Manchester-London hybrid would need to be viable.",
+      "equity": "RSUs (public-company equivalent)",
+      "equityNotes": "Late-stage, $20B+ valuation after Adobe deal collapsed. Secondary liquidity available."
+    },
+    {
+      "id": "vercel-swe-observability",
+      "company": "Vercel",
+      "title": "Software Engineer, Observability",
+      "level": "Mid-Senior",
+      "location": "London (hybrid Mon/Tue/Fri; fully remote beyond commuting distance)",
+      "salary": {
+        "min": 90000,
+        "max": 130000,
+        "published": false
+      },
+      "url": "https://vercel.com/careers/software-engineer-observability-5428982004",
+      "fitScore": 6.5,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.1,
+        "notes": "Lean environment (~600-900 employees). 'Agentic infrastructure' pivot. Accepts UK, Germany, Netherlands only in EU."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "Adjacent Elite Tech",
+      "notes": "Observability role \u2014 less direct platform match but remote-possible and strong company. Large-scale data, ClickHouse, streaming systems. JS/TypeScript/Go. Not DevSecOps but infrastructure-adjacent.",
+      "equity": "Pre-IPO options",
+      "equityNotes": "~$3.25B valuation. Early-ish stage, growing revenue."
+    },
+    {
+      "id": "xai-sre-grok",
+      "company": "xAI",
+      "title": "Site Reliability Engineer, grok.com & API",
+      "level": "Senior",
+      "location": "London (in-office 5 days/week)",
+      "salary": {
+        "min": 150000,
+        "max": 250000,
+        "published": false
+      },
+      "url": "https://job-boards.greenhouse.io/xai/jobs/5082685007",
+      "fitScore": 6.0,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 3.8,
+        "notes": "\u26a0\ufe0f HIGH CULTURE RISK: 19-hr workdays documented. '996 is for amateurs' culture. WLB 1.6 on Blind. Musk's volatile leadership. NOT recommended for 'no toxic environments' mandate."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "Direct SRE match: K8s, Buildkite, ArgoCD, Prometheus, Grafana, Pulumi/Terraform, Go. Excellent comp but REQUIRES 5 days London office + late Palo Alto calls. Excellent role on paper; culture is a dealbreaker.",
+      "equity": "Pre-IPO options",
+      "equityNotes": "Musk company \u2014 equity is the draw. But 19hr workdays, \"996 is for amateurs\" culture. HIGH CULTURE RISK.",
+      "cultureRisk": "HIGH",
+      "cultureNotes": "19hr workdays reported, \"996 is for amateurs\" \u2014 Elon Musk company. Not recommended given Katie's bad PortSwigger exit."
+    },
+    {
+      "id": "stability-ai-senior-sre",
+      "company": "Stability AI",
+      "title": "Senior Site Reliability Engineer",
+      "level": "Senior",
+      "location": "Remote/London",
+      "salary": {
+        "min": 90000,
+        "max": 140000,
+        "published": false
+      },
+      "url": "https://stability.ai/careers",
+      "fitScore": 5.0,
+      "salaryClears": false,
+      "culture": {
+        "glassdoor": 2.7,
+        "notes": "\u26a0\ufe0f HIGH RISK: 2.7 Glassdoor, significant executive turnover, 20% interview satisfaction. Reputation damaged by leadership instability."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "AWS, K8s, AI/ML infra, observability. Remote-friendly but culture concerns are severe. Only if seeking short-term gen AI infra experience.",
+      "equity": "Pre-IPO options (troubled)",
+      "equityNotes": "Major layoffs, CEO drama, 2.7 Glassdoor. CULTURE RISK.",
+      "cultureRisk": "HIGH",
+      "cultureNotes": "2.7 Glassdoor, major layoffs, CEO/board drama. Not recommended."
+    },
+    {
+      "id": "cohere-em-fde-infrastructure",
+      "company": "Cohere",
+      "title": "Engineering Manager, FDE Infrastructure (UK)",
+      "level": "Manager (Staff-equivalent)",
+      "location": "UK Remote",
+      "salary": {
+        "min": null,
+        "max": null,
+        "published": false
+      },
+      "url": "https://jobs.ashbyhq.com/cohere",
+      "fitScore": 5.0,
+      "salaryClears": false,
+      "culture": {
+        "glassdoor": 2.9,
+        "notes": "\u26a0\ufe0f HIGH RISK: 2.9 Glassdoor, 'poor leadership,' 'toxic elements,' public Slack callouts. Aleph Alpha merger (Apr 2026) adds chaos. 48% recommend."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "AI Lab",
+      "notes": "UK-based, remote-eligible. Infrastructure leadership but management track, not IC. Culture signals are among worst in AI labs.",
+      "equity": "Pre-IPO options (troubled)",
+      "equityNotes": "2.9 Glassdoor, toxic leadership reports. CULTURE RISK.",
+      "cultureRisk": "HIGH",
+      "cultureNotes": "2.9 Glassdoor, toxic leadership reports. Not recommended."
+    },
+    {
+      "id": "meta-network-production-engineer",
+      "company": "Meta",
+      "title": "Network Production Engineer, Infrastructure",
+      "level": "Senior",
+      "location": "London (hybrid)",
+      "salary": {
+        "min": 108000,
+        "max": 160000,
+        "published": false
+      },
+      "url": "https://metacareers.com",
+      "fitScore": 4.5,
+      "salaryClears": true,
+      "culture": {
+        "glassdoor": 4.0,
+        "notes": "Meta uses 'Production Engineer' instead of SRE. London King's Cross office. Visa sponsorship available. Competitive equity."
+      },
+      "status": "live",
+      "verified": true,
+      "tier": "FAANG",
+      "notes": "Job ID a1KDp00000E2ZXxMAN_1001. Posted Dec 2025. Network focus may be too specialized. Use 'Production Engineer' not 'SRE' when searching Meta careers. Hybrid not fully remote.",
+      "equity": "Public RSUs",
+      "equityNotes": "Quarterly vesting. $1.3T market cap. RSUs at staff level typically $200K+/yr."
+    },
     {
       "id": "grafana-staff-swe-databases-sre",
       "company": "Grafana Labs",
@@ -77,9 +397,8 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Strongest match \u2014 Staff level + fully remote + DevSecOps-adjacent (observability/reliability). Embedded SRE team in Mimir/Loki squads. High-SLA reliability, Go/K8s/AWS.",
-      "equity": "RSUs",
-      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
+      "tier": "Adjacent",
+      "notes": "Strongest adjacent match \u2014 Staff level + fully remote + DevSecOps-adjacent (observability/reliability). Embedded SRE team in Mimir/Loki squads. High-SLA reliability, Go/K8s/AWS."
     },
     {
       "id": "grafana-senior-swe-platform-infrasec",
@@ -101,9 +420,8 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Perfect DevSecOps title match. Platform + Infrastructure Security directly maps to Katie's skill set. Bottom of band sub-\u00a395k \u2014 negotiation needed but mid-to-top clears.",
-      "equity": "RSUs",
-      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
+      "tier": "Adjacent",
+      "notes": "Perfect DevSecOps title match. Platform + Infrastructure Security directly maps to Katie's skill set. Bottom of band sub-\u00a395k \u2014 negotiation needed but mid-to-top clears."
     },
     {
       "id": "grafana-senior-swe-databases-managed-services",
@@ -125,9 +443,8 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Less direct DevSecOps fit (data infrastructure focus) but strong platform/operations overlap. Go, Kubernetes, cloud.",
-      "equity": "RSUs",
-      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
+      "tier": "Adjacent",
+      "notes": "Less direct DevSecOps fit (data infrastructure focus) but strong platform/operations overlap. Go, Kubernetes, cloud."
     },
     {
       "id": "grafana-senior-swe-application-core-services",
@@ -149,9 +466,8 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Less direct platform/security fit, but strong engineering role. Multi-country EMEA scope.",
-      "equity": "RSUs",
-      "equityNotes": "Public company RSUs \u2014 part of standard comp. Good but not life-changing at staff level."
+      "tier": "Adjacent",
+      "notes": "Less direct platform/security fit, but strong engineering role. Multi-country EMEA scope."
     },
     {
       "id": "snyk-senior-swe-data-infrastructure",
@@ -173,9 +489,8 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Kafka, Snowflake, Terraform, Go, AWS. Data platform focus rather than DevSecOps. No band published \u2014 typically \u00a385K\u2013\u00a3115K estimate.",
-      "equity": "Pre-IPO options",
-      "equityNotes": "Late-stage private, valued ~.5B. Options could be meaningful if IPO timeline is near."
+      "tier": "Adjacent",
+      "notes": "Kafka, Snowflake, Terraform, Go, AWS. Data platform focus rather than DevSecOps. No band published \u2014 typically \u00a385K\u2013\u00a3115K estimate."
     },
     {
       "id": "wiz-security-engineer-product-production-infra",
@@ -197,9 +512,8 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Strong DevSecOps match \u2014 threat modeling, K8s security, IaC, CNAPP, CSPM. UK band not published; US base $204K\u2013$281K but UK likely 20-30% lower.",
-      "equity": "Pre-IPO options",
-      "equityNotes": "Rapidly growing cloud security. 0B+ valuation. IPO widely expected."
+      "tier": "Adjacent",
+      "notes": "Strong DevSecOps match \u2014 threat modeling, K8s security, IaC, CNAPP, CSPM. UK band not published; US base $204K\u2013$281K but UK likely 20-30% lower."
     },
     {
       "id": "immersive-labs-senior-cloud-security-engineer",
@@ -221,12 +535,75 @@
       },
       "status": "live",
       "verified": true,
-      "notes": "Cloud security content creation + educational lab building. Not platform engineering \u2014 curriculum design. Likely sub-\u00a395k.",
-      "equity": null,
-      "equityNotes": null
+      "tier": "Adjacent",
+      "notes": "Cloud security content creation + educational lab building. Not platform engineering \u2014 curriculum design. Likely sub-\u00a395k."
     }
   ],
-  "unverified": [],
+  "unverified": [
+    {
+      "id": "openai-swe-cloud-infrastructure",
+      "company": "OpenAI",
+      "title": "Software Engineer, Cloud Infrastructure",
+      "level": "Senior",
+      "location": "London",
+      "url": "https://openai.com/careers",
+      "notes": "Applied AI Infrastructure team. Direct match for cloud platform background."
+    },
+    {
+      "id": "openai-swe-infrastructure-reliability",
+      "company": "OpenAI",
+      "title": "Software Engineer, Infrastructure Reliability",
+      "level": "Senior",
+      "location": "London",
+      "url": "https://openai.com/careers",
+      "notes": "Applied AI Infrastructure team. Reliability focus directly maps to platform engineering."
+    },
+    {
+      "id": "openai-swe-platform-systems",
+      "company": "OpenAI",
+      "title": "Software Engineer, Platform Systems",
+      "level": "Senior",
+      "location": "London",
+      "url": "https://openai.com/careers",
+      "notes": "Systems team. Closest to 'Platform Engineer' title at OpenAI."
+    },
+    {
+      "id": "anthropic-staff-safeguards-infrastructure",
+      "company": "Anthropic",
+      "title": "Staff+ Software Engineer, Safeguards Infrastructure",
+      "level": "Staff+",
+      "location": "London",
+      "url": "https://www.anthropic.com/careers",
+      "notes": "Safety/oversight systems for AI. 4-10 years Python. Unique safety infrastructure angle."
+    },
+    {
+      "id": "anthropic-senior-swe-inference",
+      "company": "Anthropic",
+      "title": "Senior Software Engineer, Inference",
+      "level": "Senior",
+      "location": "London",
+      "url": "https://www.anthropic.com/careers",
+      "notes": "Listed under Infrastructure. Inference serving at scale."
+    },
+    {
+      "id": "amazon-aws-sysdev-networking",
+      "company": "Amazon/AWS",
+      "title": "System Development Engineer, AWS Networking",
+      "level": "Mid-Senior",
+      "location": "UK (hybrid; requires security clearance)",
+      "url": "https://amazon.jobs/en/jobs/10452529",
+      "notes": "Job ID 10452529. Requires UK Government Security Clearance (UK nationals only). AWS networking focus."
+    },
+    {
+      "id": "elevenlabs-infra-data-automations",
+      "company": "ElevenLabs",
+      "title": "Infrastructure Engineer (Data & Automations)",
+      "level": "Senior",
+      "location": "Remote (global); GMT-GMT+3 preferred",
+      "url": "https://elevenlabs.io/careers/01d0899b-0e40-4af2-a859-5d21962666b1/",
+      "notes": "Core Platform team. ETLs, automation infra, Python, K8s, CI/CD. Remote-first, UK timezone favored."
+    }
+  ],
   "dead": [
     {
       "id": "portswigger-platform-engineer",
@@ -245,6 +622,7 @@
       "culture": {},
       "status": "dead",
       "verified": false,
+      "tier": "N/A",
       "notes": "Role closed (was live Feb 2026). Employer VETOED by candidate \u2014 bad exit, toxic culture."
     }
   ],
@@ -280,15 +658,70 @@
     {
       "company": "Aikido Security",
       "detail": "No results for UK platform/DevSecOps roles."
+    },
+    {
+      "company": "Google DeepMind",
+      "detail": "London SRE/Platform roles not found. DeepMind tends to hire research engineers over platform/SRE. Google London may have SRE \u2014 check careers.google.com separately."
+    },
+    {
+      "company": "Netflix",
+      "detail": "No verified UK-focused Platform/DevSecOps roles. SRE-Infrastructure Platforms (Remote EMEA) listed via NextLevelJobs but not confirmed on Netflix.com. UK engineering presence minimal."
+    },
+    {
+      "company": "Apple",
+      "detail": "London SRE roles exist but all on-site, not remote/hybrid. SWE Manager - Kubernetes (London), SRE Observability (London). No remote UK flexibility."
+    },
+    {
+      "company": "Mistral AI",
+      "detail": "No London engineering roles currently on jobs.lever.co/mistral. DevOps HPC and Research Engineer roles may exist but not listed under London filter. Recheck mistral.ai/careers."
+    },
+    {
+      "company": "Sakana AI",
+      "detail": "SWE Platform (Tokyo) + Infra/Platform Reliability (Tokyo). Both require relocation to Tokyo. Visa support provided. No UK remote."
+    },
+    {
+      "company": "Hugging Face",
+      "detail": "No Platform/SRE/Infra Engineer titles. Data/Infrastructure Advocate Engineer (EMEA Remote) is infra-adjacent but advocacy-focused. Below-market cash comp."
+    },
+    {
+      "company": "Runway",
+      "detail": "No Platform/SRE/Infra roles listed. GPU Performance Research Engineer closest. Product Lead, Developer Platform is PM, not engineering."
+    },
+    {
+      "company": "Midjourney",
+      "detail": "No public careers page. ~40-50 employees, SF in-person only. Not viable for UK candidate."
+    },
+    {
+      "company": "Cursor/Anysphere",
+      "detail": "In-person SF only (5-day office). Zero remote flexibility. $808K\u2013$1.28M comp but requires SF relocation."
+    },
+    {
+      "company": "Cognition AI/Devin",
+      "detail": "SRE + Infra roles SF only. No UK or remote options. $260K\u2013$300K base for SF."
+    },
+    {
+      "company": "Scale AI",
+      "detail": "ML Infra (SF/NY/Seattle), Senior/Staff Infra (US). London roles for Enterprise AI SWE exist but not platform/infra-specific."
+    },
+    {
+      "company": "Weights & Biases",
+      "detail": "Senior SWE Infrastructure Ops found but likely US-based. EMEA Remote UK for Support Engineer only. CoreWeave integration creating new infra roles \u2014 monitor."
+    },
+    {
+      "company": "Modal Labs",
+      "detail": "MTS Platform Engineering (NY/Stockholm/SF). No UK roles. Remote-friendly for some non-platform roles."
+    },
+    {
+      "company": "Notion",
+      "detail": "London engineering: SWE AI Product. No platform/SRE/infra roles in London. In-office Mon/Tue/Thu mandatory."
+    },
+    {
+      "company": "Microsoft",
+      "detail": "Azure Core Cambridge/London/Remote likely has roles but search timed out. UK Staff/Principal SRE comp estimated \u00a3120K\u2013\u00a3180K base + significant RSU. Recheck careers.microsoft.com for London SRE."
+    },
+    {
+      "company": "Vercel (Compute role)",
+      "detail": "SWE Compute (London, hybrid) \u2014 compute infrastructure role separate from Observability lead. Worth monitoring alongside verified Observability role."
     }
-  ],
-  "contacts": {
-    "known": [
-      "AWS",
-      "Hashicorp",
-      "Datadog",
-      "Darktrace"
-    ],
-    "note": "12+ years in UK tech scene. Has direct contacts at these companies \u2014 referral route available. Full network mapping pending LinkedIn Connections.csv export."
-  }
+  ]
 }
