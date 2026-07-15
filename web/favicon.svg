@@ -1,8 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <circle cx="50" cy="50" r="48" fill="#fbf7f0" stroke="#2d2a26" stroke-width="3"/>
-  <path d="M50 75 L50 25 M35 40 L50 25 L65 40" fill="none" stroke="#5b8c6e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="50" cy="25" r="3" fill="#5b8c6e"/>
-  <circle cx="38" cy="60" r="2" fill="#5b8c6e" opacity="0.6"/>
-  <circle cx="55" cy="65" r="1.5" fill="#5b8c6e" opacity="0.4"/>
-  <circle cx="45" cy="70" r="2" fill="#5b8c6e" opacity="0.5"/>
+  <!-- Hamster body -->
+  <ellipse cx="50" cy="65" rx="18" ry="14" fill="#5b8c6e"/>
+  <!-- Head -->
+  <circle cx="50" cy="45" r="16" fill="#5b8c6e"/>
+  <!-- Ears -->
+  <circle cx="38" cy="32" r="5" fill="#5b8c6e" stroke="#2d2a26" stroke-width="1.5"/>
+  <circle cx="62" cy="32" r="5" fill="#5b8c6e" stroke="#2d2a26" stroke-width="1.5"/>
+  <!-- Eyes -->
+  <circle cx="44" cy="42" r="2.5" fill="#2d2a26"/>
+  <circle cx="56" cy="42" r="2.5" fill="#2d2a26"/>
+  <!-- Nose -->
+  <ellipse cx="50" cy="48" rx="2.5" ry="1.8" fill="#2d2a26"/>
+  <!-- Smile -->
+  <path d="M46 51 Q50 55 54 51" fill="none" stroke="#2d2a26" stroke-width="1.2" stroke-linecap="round"/>
+  <!-- Paws holding coin -->
+  <circle cx="42" cy="56" r="3" fill="#fbf7f0" stroke="#2d2a26" stroke-width="1"/>
+  <circle cx="58" cy="56" r="3" fill="#fbf7f0" stroke="#2d2a26" stroke-width="1"/>
+  <!-- Gold coin -->
+  <circle cx="50" cy="57" r="5" fill="#c48a2e" stroke="#2d2a26" stroke-width="1.2"/>
+  <text x="50" y="60" text-anchor="middle" font-size="6" font-weight="bold" fill="#2d2a26">£</text>
 </svg>
