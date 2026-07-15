@@ -147,6 +147,33 @@
       "equityNotes": "Fast-growing AI audio unicorn. Early enough for meaningful equity, late enough for near-term liquidity."
     },
     {
+      "id": "databricks-staff-swe-data-platform",
+      "company": "Databricks",
+      "title": "Staff Software Engineer, Data Platform",
+      "level": "Staff (L6)",
+      "location": "London (hybrid)",
+      "salary": {
+        "min": 300000,
+        "max": 550000,
+        "published": false
+      },
+      "url": "https://www.databricks.com/company/careers/engineering---pipeline/staff-software-engineer-data-platform-7652016002",
+      "fitScore": 8.5,
+      "salaryClears": true,
+      "inHouse": true,
+      "equity": "Pre-IPO options",
+      "equityNotes": "Pre-IPO at ~$100B. Life-changing equity if IPO 2026-2027. Staff RSUs could be GBP 200K-400K/yr. TOTAL COMP GBP 300K-550K.",
+      "equityQuality": "life-changing",
+      "culture": {
+        "glassdoor": 4.1,
+        "notes": "Engineering-driven, high-performance. Hypergrowth org change. WLB 3.7."
+      },
+      "cultureRisk": "LOW-MED",
+      "status": "live",
+      "verified": true,
+      "notes": "Build Data Intelligence Platform. GenAI platform + MCP experience directly maps. London hybrid works from Manchester. 12+ years exp = you qualify."
+    },
+    {
       "id": "replit-staff-sre",
       "company": "Replit",
       "title": "Staff Site Reliability Engineer",
@@ -195,6 +222,60 @@
       "notes": "Platform & Infrastructure team. K8s clusters for AI model inference/training, Slurm HPC, AWS. 174+ applicants \u2014 high competition but Katie's AI platform experience is a differentiator.",
       "equity": "Pre-IPO options",
       "equityNotes": "AI search, $9B+ valuation. Competitive with Google. High upside."
+    },
+    {
+      "id": "reddit-staff-sre-site-experience",
+      "company": "Reddit",
+      "title": "Staff Site Reliability Engineer, Site Experience",
+      "level": "Staff (L5)",
+      "location": "UK Remote",
+      "salary": {
+        "min": 120000,
+        "max": 180000,
+        "published": false
+      },
+      "url": "https://www.redditinc.com/careers",
+      "fitScore": 7.5,
+      "salaryClears": true,
+      "inHouse": true,
+      "equity": "Public RSUs",
+      "equityNotes": "Post-IPO (Mar 2024). Liquid RSUs. UK est. GBP 170K-225K TC.",
+      "equityQuality": "strong",
+      "culture": {
+        "glassdoor": 3.6,
+        "notes": "Post-IPO growing pains. Interview to probe culture stability."
+      },
+      "cultureRisk": "MEDIUM",
+      "status": "live",
+      "verified": true,
+      "notes": "Core site reliability at Staff level. Platform-level scope. Posted ~1 week ago. Active listing."
+    },
+    {
+      "id": "gitlab-principal-engineer-infra-platforms",
+      "company": "GitLab",
+      "title": "Principal Engineer, Infrastructure Platforms",
+      "level": "Principal",
+      "location": "Remote Global",
+      "salary": {
+        "min": 100000,
+        "max": 220000,
+        "published": false
+      },
+      "url": "https://about.gitlab.com/jobs",
+      "fitScore": 7.5,
+      "salaryClears": true,
+      "inHouse": true,
+      "equity": "Public RSUs",
+      "equityNotes": "GTLB stock crushed ($25 vs $130 ATH). RSUs worth 80% less but fully remote + great WLB.",
+      "equityQuality": "decent",
+      "culture": {
+        "glassdoor": 3.9,
+        "notes": "All-remote by design. WLB 3.9 = best in class. Async-first. Mixed reviews under new CEO."
+      },
+      "cultureRisk": "LOW-MED",
+      "status": "live",
+      "verified": true,
+      "notes": "Developer Experience, CI infra, packaging, release delivery. GenAI platform maps to GitLab AI push. Manchester from day one."
     },
     {
       "id": "stripe-staff-swe-service-platform",
@@ -247,6 +328,33 @@
       "equityNotes": "Late-stage, $20B+ valuation after Adobe deal collapsed. Secondary liquidity available."
     },
     {
+      "id": "palantir-senior-swe-substrate",
+      "company": "Palantir",
+      "title": "Senior Software Engineer, Substrate",
+      "level": "Senior* (Staff scope)",
+      "location": "London (hybrid)",
+      "salary": {
+        "min": 100000,
+        "max": 150000,
+        "published": false
+      },
+      "url": "https://jobs.lever.co/palantir",
+      "fitScore": 7.0,
+      "salaryClears": true,
+      "inHouse": true,
+      "equity": "Public RSUs",
+      "equityNotes": "PLTR public RSUs. London base GBP 100K-150K + RSUs.",
+      "equityQuality": "strong",
+      "culture": {
+        "glassdoor": 3.8,
+        "notes": "WLB 2.9 = WORST in scan. 10-12hr days, 'sink or swim.' London teams marginally better."
+      },
+      "cultureRisk": "HIGH - WLB dealbreaker risk",
+      "status": "live",
+      "verified": true,
+      "notes": "Core K8s infra (100s of clusters). Go/Rust/Python/K8s/CNCF. Strong tech match. Interview teams carefully for WLB."
+    },
+    {
       "id": "vercel-swe-observability",
       "company": "Vercel",
       "title": "Software Engineer, Observability",
@@ -270,6 +378,60 @@
       "notes": "Observability role \u2014 less direct platform match but remote-possible and strong company. Large-scale data, ClickHouse, streaming systems. JS/TypeScript/Go. Not DevSecOps but infrastructure-adjacent.",
       "equity": "Pre-IPO options",
       "equityNotes": "~$3.25B valuation. Early-ish stage, growing revenue."
+    },
+    {
+      "id": "darktrace-staff-platform-engineer",
+      "company": "Darktrace",
+      "title": "Staff Platform Engineer",
+      "level": "Staff",
+      "location": "Cambridge (hybrid)",
+      "salary": {
+        "min": 60000,
+        "max": 85000,
+        "published": false
+      },
+      "url": "https://www.darktrace.com/careers",
+      "fitScore": 6.5,
+      "salaryClears": false,
+      "inHouse": true,
+      "equity": "PE equity (illiquid)",
+      "equityNotes": "Thoma Bravo PE acquisition 2024. Illiquid PE equity. Base alone may not clear 95K.",
+      "equityQuality": "weak",
+      "culture": {
+        "glassdoor": 3.0,
+        "notes": "Cambridge HQ UK. Engineering culture better than sales. 'Given a lot of responsibility.' Hybrid 2 days."
+      },
+      "cultureRisk": "LOW-MED",
+      "status": "live",
+      "verified": true,
+      "notes": "WARM REFERRAL available. Staff title match. BUT went private = no liquid equity. Confirm comp via contact."
+    },
+    {
+      "id": "elastic-platform-sre",
+      "company": "Elastic",
+      "title": "Platform SRE",
+      "level": "Senior",
+      "location": "Global Remote",
+      "salary": {
+        "min": 85000,
+        "max": 130000,
+        "published": false
+      },
+      "url": "https://www.elastic.co/careers",
+      "fitScore": 6.5,
+      "salaryClears": false,
+      "inHouse": true,
+      "equity": "Public RSUs",
+      "equityNotes": "ESTC public RSUs but stock stagnant per reviews.",
+      "equityQuality": "decent",
+      "culture": {
+        "glassdoor": 3.8,
+        "notes": "BEST WLB in scan: 3.9-4.2. Distributed-by-design. Genuinely healthy culture."
+      },
+      "cultureRisk": "LOW",
+      "status": "live",
+      "verified": true,
+      "notes": "Multi-cloud platform for Elastic Cloud. K8s, cloud, Linux, open source. Remote-first. Best WLB but Senior level + weak equity."
     },
     {
       "id": "xai-sre-grok",
@@ -297,6 +459,33 @@
       "equityNotes": "Musk company \u2014 equity is the draw. But 19hr workdays, \"996 is for amateurs\" culture. HIGH CULTURE RISK.",
       "cultureRisk": "HIGH",
       "cultureNotes": "19hr workdays reported, \"996 is for amateurs\" \u2014 Elon Musk company. Not recommended given Katie's bad PortSwigger exit."
+    },
+    {
+      "id": "cloudflare-principal-swe-workers-ai",
+      "company": "Cloudflare",
+      "title": "Principal Software Engineer, Workers AI",
+      "level": "Principal",
+      "location": "London (hybrid)",
+      "salary": {
+        "min": 120000,
+        "max": 180000,
+        "published": false
+      },
+      "url": "https://www.cloudflare.com/careers",
+      "fitScore": 6.0,
+      "salaryClears": true,
+      "inHouse": true,
+      "equity": "Public RSUs",
+      "equityNotes": "NET public RSUs. Comp criticized as low vs FAANG at Staff+ level.",
+      "equityQuality": "decent",
+      "culture": {
+        "glassdoor": 3.9,
+        "notes": "Remote policy tightened. Management variable by team. Do homework before applying."
+      },
+      "cultureRisk": "MEDIUM",
+      "status": "live",
+      "verified": true,
+      "notes": "AI inference at the edge, Workers platform. Edge AI + platform maps to your experience. Verify team/manager."
     },
     {
       "id": "stability-ai-senior-sre",
@@ -722,6 +911,30 @@
     {
       "company": "Vercel (Compute role)",
       "detail": "SWE Compute (London, hybrid) \u2014 compute infrastructure role separate from Observability lead. Worth monitoring alongside verified Observability role."
+    },
+    {
+      "company": "Canva",
+      "detail": "UK engineering limited. No UK platform roles. Engineering mostly Sydney/US."
+    },
+    {
+      "company": "Snowflake",
+      "detail": "No Staff/Principal Platform UK roles. Only Solutions Engineering (customer-facing)."
+    },
+    {
+      "company": "Confluent",
+      "detail": "IBM acquisition eviscerated culture. High risk. No Staff level UK platform roles."
+    },
+    {
+      "company": "MongoDB",
+      "detail": "No UK platform engineering. European hub Dublin. UK roles customer-facing only."
+    },
+    {
+      "company": "Hashicorp",
+      "detail": "IBM acquisition. No new RSUs. No UK roles. Culture destroyed. Contact only."
+    },
+    {
+      "company": "AWS",
+      "detail": "No direct Staff IC UK roles surfaced. AWS UK engineering exists but internal. Use contact."
     }
   ],
   "contacts": {
