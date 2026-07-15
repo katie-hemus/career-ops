@@ -133,7 +133,7 @@
         "published": false
       },
       "url": "https://elevenlabs.io/careers/687394d7-fbf8-49ed-822e-c0690191330c/infrastructure-security-engineer",
-      "fitScore": 8.5,
+      "fitScore": 9.0,
       "salaryClears": true,
       "culture": {
         "glassdoor": 4.2,
@@ -142,7 +142,7 @@
       "status": "live",
       "verified": true,
       "tier": "AI Lab",
-      "notes": "Perfect DevSecOps title match. UK timezone-preferred \u2014 Manchester-remote fits. Cloud-native security, CI/CD, supply chain, K8s, Terraform. AI/ML security bonus maps to GenAI platform. Core hours 2pm-6pm GMT.",
+      "notes": "Perfect DevSecOps title match. UK timezone-preferred \u2014 Manchester-remote fits. Cloud-native security, CI/CD, supply chain, K8s, Terraform. AI/ML security bonus maps to GenAI platform. Core hours 2pm-6pm GMT. WARM REFERRAL: Josh (ex-PortSwigger tech support) now at ElevenLabs.",
       "equity": "Pre-IPO options",
       "equityNotes": "Fast-growing AI audio unicorn. Early enough for meaningful equity, late enough for near-term liquidity."
     },
@@ -723,5 +723,38 @@
       "company": "Vercel (Compute role)",
       "detail": "SWE Compute (London, hybrid) \u2014 compute infrastructure role separate from Observability lead. Worth monitoring alongside verified Observability role."
     }
-  ]
+  ],
+  "contacts": {
+    "known": [
+      "AWS",
+      "Hashicorp",
+      "Datadog",
+      "Darktrace",
+      "ElevenLabs"
+    ],
+    "details": {
+      "ElevenLabs": {
+        "name": "Josh",
+        "from": "PortSwigger tech support",
+        "status": "warm"
+      },
+      "AWS": {
+        "name": "TBC",
+        "status": "warm"
+      },
+      "Hashicorp": {
+        "name": "TBC",
+        "status": "warm"
+      },
+      "Datadog": {
+        "name": "TBC",
+        "status": "warm"
+      },
+      "Darktrace": {
+        "name": "TBC",
+        "status": "warm"
+      }
+    },
+    "note": "12+ years in UK tech scene. Direct contacts at these companies \u2014 referral route available. Full network mapping pending LinkedIn Connections.csv export."
+  }
 }
