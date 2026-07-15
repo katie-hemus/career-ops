@@ -1,0 +1,60 @@
+{
+  "people": ["katie", "claire"],
+  "endpoints": {
+    "Checkout.com": {
+      "ats": "ashby",
+      "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/checkout.com"
+    },
+    "Allica Bank": {
+      "ats": "ashby",
+      "apiUrl": "https://api.ashbyhq.com/posting-api/job-board/allica-bank"
+    },
+    "GoCardless": {
+      "ats": "greenhouse",
+      "apiUrl": "https://boards-api.greenhouse.io/v1/boards/gocardless/jobs"
+    },
+    "Grafana Labs": {
+      "ats": "greenhouse",
+      "apiUrl": "https://boards-api.greenhouse.io/v1/boards/grafanalabs/jobs"
+    },
+    "Monzo": {
+      "ats": "greenhouse",
+      "apiUrl": "https://boards-api.greenhouse.io/v1/boards/monzo/jobs"
+    },
+    "Nelson Bostock": {
+      "ats": "workable",
+      "apiUrl": "https://jobs.workable.com/company/5h6zZmDKSN3eZyir1SHJLR/jobs-at-nelson-bostock-unlimited"
+    },
+    "Snyk": {
+      "ats": "greenhouse",
+      "apiUrl": null,
+      "note": "Greenhouse board deactivated (404). Use snyk.io/careers/all-jobs/ (JS-rendered) or aggregators."
+    },
+    "Wiz": {
+      "ats": "greenhouse",
+      "apiUrl": null,
+      "note": "Redirects to wiz.io/careers (JS-rendered). Use direct job URLs or aggregators."
+    },
+    "Immersive Labs": {
+      "ats": "custom",
+      "apiUrl": null,
+      "note": "Careers page at immersivelabs.com/careers (JS-rendered)."
+    },
+    "PortSwigger": {
+      "ats": "workable",
+      "apiUrl": "https://apply.workable.com/portswigger",
+      "note": "VETOED by Katie — listed for completeness only."
+    }
+  },
+  "problematic": {
+    "Revolut": {
+      "note": "Bot-blocked, aggregator-only",
+      "aggregatorSearch": "revolut communications manager UK site:linkedin.com/jobs"
+    },
+    "Nelson Bostock": {
+      "note": "Cloudflare block, Workable bypass works"
+    }
+  },
+  "ashbyPattern": "https://api.ashbyhq.com/posting-api/job-board/{org}?includeCompensation=true",
+  "greenhousePattern": "https://boards-api.greenhouse.io/v1/boards/{org}/jobs?content=true"
+}

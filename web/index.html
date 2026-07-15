@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Career ops dashboard — Katie Hemus &amp; Claire job search pipeline">
+  <title>Career Ops Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="color-scheme" content="light">
+</head>
+<body>
+
+  <!-- Password gate -->
+  <div id="password-gate">
+    <div class="gate-card">
+      <h1>🔒 Career Ops</h1>
+      <p>Enter the shared password to continue.</p>
+      <form id="password-form">
+        <input type="password" id="password-input" placeholder="Password" autocomplete="current-password" autofocus>
+        <button type="submit">Unlock</button>
+        <p id="password-error" class="error-msg"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main dashboard (hidden behind gate) -->
+  <div id="dashboard" class="hidden">
+    <header>
+      <h1>Career Ops Dashboard</h1>
+      <nav id="tab-nav">
+        <button class="tab active" data-tab="katie">Katie Hemus</button>
+        <button class="tab" data-tab="claire">Claire</button>
+      </nav>
+      <div class="header-controls">
+        <button id="lock-btn" title="Lock dashboard">🔒</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Candidate profile bar -->
+      <section id="candidate-profile" class="profile-bar"></section>
+
+      <!-- Filters -->
+      <section class="filters">
+        <label class="filter-label">
+          <input type="checkbox" id="filter-salary"> Salary clears floor only
+        </label>
+        <label class="filter-label">
+          <span>Min fit score:</span>
+          <select id="filter-fitscore">
+            <option value="0">All</option>
+            <option value="2">≥ 2.0</option>
+            <option value="3">≥ 3.0</option>
+            <option value="4">≥ 4.0</option>
+          </select>
+        </label>
+        <label class="filter-label">
+          <span>Company:</span>
+          <select id="filter-company">
+            <option value="">All</option>
+          </select>
+        </label>
+        <span id="role-count" class="count-badge"></span>
+      </section>
+
+      <!-- Role cards grid -->
+      <section id="role-cards" class="cards-grid"></section>
+
+      <!-- Empty state -->
+      <section id="empty-state" class="empty-state hidden">
+        <p>No roles match the current filters.</p>
+      </section>
+
+      <!-- Checked-empty section -->
+      <details class="checked-empty">
+        <summary>Companies checked — nothing suitable (<span id="checked-count">0</span>)</summary>
+        <ul id="checked-list"></ul>
+      </details>
+
+      <!-- Dead roles -->
+      <details class="dead-roles" id="dead-section">
+        <summary>Dead / closed roles (<span id="dead-count">0</span>)</summary>
+        <ul id="dead-list"></ul>
+      </details>
+
+      <!-- Unverified roles -->
+      <details class="unverified-roles" id="unverified-section">
+        <summary>Unverified leads (<span id="unverified-count">0</span>)</summary>
+        <ul id="unverified-list"></ul>
+      </details>
+    </main>
+
+    <footer>
+      <p>Last scan: <span id="last-scan">—</span> · Career Ops Pipeline · Private</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
