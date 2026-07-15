@@ -56,11 +56,16 @@ let the referral open the door and the recommendation reassure the human who rea
   reconnect (coffee/DM), ask for intel on who's hiring platform/DevSecOps people.
 - ❌ **Boomerang to PortSwigger: VETOED (2026-07-15).** Bad exit, toxic culture — hard no
   from the candidate. Remove PortSwigger-the-employer from every play in this file.
-- ⚠️ **Network caution:** the alumni/recommender plays above assume warm PortSwigger
-  relationships. With a bad exit, CONFIRM WITH KATIE which relationships survived before any
-  outreach — including whether the researcher-recommender is still friendly. Alumni who have
-  also *left* may be the warmest contacts of all (shared experience), but let her name who
-  is safe. No outreach on her behalf without her explicit per-person OK.
+- ✅ **Network clarified (2026-07-15): her PortSwigger friendships are INTACT.** The fallout
+  was specifically with **the owner, his wife, and the culture/HR department** — not with
+  engineering colleagues. She still has friends and connections there. So:
+  the alumni/referral plays in this file are BACK ON, including the researcher-recommender
+  (a colleague, not management). Current employees can still refer her *outward* (intel,
+  intros to hiring managers elsewhere) and alumni are full-strength contacts.
+  **Standing exclusions:** never route anything through the owner, his wife, or HR/culture
+  dept; and no return to PortSwigger as an employer regardless of who asks (a fallout with
+  the owner of a founder-run company is unfixable by definition). As always, Katie makes
+  the actual contact — we prep the messages and the who/why.
 
 ## Priority events & communities (cyber + DevSecOps, NW England / remote)
 
