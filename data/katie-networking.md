@@ -48,6 +48,38 @@ assume).
 lever. Lead with verifiable substance (PortSwigger platform work, GenAI-infra/K8s/AWS depth);
 let the referral open the door and the recommendation reassure the human who reads the profile.
 
+## ⭐ Departed senior hires (added 2026-07-15 — high-leverage, shared-exit empathy)
+
+Katie got along with several senior people PortSwigger brought in who have since been
+fired or left — i.e. people who experienced the same regime and departed under it. These
+are premium contacts: senior, well-networked, zero loyalty to the owner, and personally
+warm to her. (Names as given by Incognito 2026-07-15; get surnames/LinkedIn from Katie.)
+
+### "James(?) the recruiter" — in-house talent lead, now departed
+- **Why he's gold:** a recruiter who has SEEN her work from the inside can place her, not
+  just refer her. Recruiters who leave in-house roles typically land at agencies or other
+  tech companies' talent teams — either way they carry live vacancy knowledge at exactly
+  her level, and an inside-view endorsement ("I hired around her, she's the real deal")
+  beats any cold application.
+- **Plays:** (1) find where he is now — if agency-side, he can actively market her to
+  clients at the £95k+/remote bar; (2) market intel: which security/platform teams are
+  actually paying staff/principal money right now; (3) CV review from someone who screened
+  for that org — he knows what the market band reads for.
+
+### "Jim" — ex-Google Head of Growth, now departed
+- **Why he's gold:** ex-Google senior leadership networks are dense with hiring managers at
+  exactly the companies on her shortlist (Google-alumni founders/execs across UK/EU scale-ups).
+  Wherever he landed, that company likely needs platform/infra people; and one intro from a
+  former Head of Growth carries exec-level weight.
+- **Plays:** (1) where is he now — his current company is an instant shortlist candidate to
+  vet against the £95k+/remote/culture bar; (2) ask him for 2-3 intros into his network's
+  infra/platform hiring managers; (3) he understands the GenAI-infra story commercially —
+  good person to pressure-test her staff/principal positioning pitch.
+
+**Shared-exit framing for both:** these conversations open naturally ("we both know what
+that place was like") — but keep every written message neutral about PortSwigger; the
+empathy is for the call, not for anything in writing that could travel.
+
 ## PortSwigger alumni network (her warmest pool)
 
 - She already has an insider network at **PortSwigger (Knutsford, NW England)** and among its
