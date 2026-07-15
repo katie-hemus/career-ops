@@ -3,7 +3,8 @@
   "profile": "Senior PR & Communications",
   "criteria": {
     "salaryFloor": null,
-    "remotePreference": "hybrid-london",
+    "remotePreference": "hybrid-manchester-or-fully-remote",
+    "inHouseOnly": true,
     "cultureMandatory": true
   },
   "lastScan": "2026-07-15",
@@ -16,42 +17,13 @@
       "location": "London (hybrid)",
       "salary": { "min": 98600, "max": 108000, "published": true },
       "url": "https://job-boards.greenhouse.io/monzo/jobs/8053191",
-      "fitScore": 4.5,
+      "fitScore": 3.5,
       "salaryClears": true,
+      "inHouse": true,
       "culture": { "glassdoor": 4.1, "notes": "Fintech in-house, strong consumer brand, collaborative culture" },
       "status": "live",
       "verified": true,
-      "notes": "Fintech in-house, senior consumer comms. FTC but 12 months at strong salary. Best match from scan."
-    },
-    {
-      "id": "fight-or-flight-account-director",
-      "company": "Fight or Flight",
-      "title": "Account Director",
-      "level": "Senior",
-      "location": "London (hybrid)",
-      "salary": { "min": 60000, "max": 60000, "published": true },
-      "url": "https://www.fightorflight.com/careers",
-      "fitScore": 4.0,
-      "salaryClears": false,
-      "culture": { "glassdoor": null, "notes": "B2B tech PR agency, well-regarded in the space" },
-      "status": "live",
-      "verified": true,
-      "notes": "Strong PR role fit but agency-side at £60K. Below in-house salary potential."
-    },
-    {
-      "id": "fight-or-flight-account-manager",
-      "company": "Fight or Flight",
-      "title": "Account Manager",
-      "level": "Mid",
-      "location": "London (hybrid)",
-      "salary": { "min": null, "max": null, "published": false },
-      "url": "https://www.fightorflight.com/careers",
-      "fitScore": 2.5,
-      "salaryClears": false,
-      "culture": { "glassdoor": null, "notes": "B2B tech PR agency" },
-      "status": "live",
-      "verified": true,
-      "notes": "Below Claire's senior level."
+      "notes": "Fintech in-house, senior consumer comms. FTC but 12 months at strong salary. LOCATION PENALTY: London-only, not Manchester/remote — confirm remote-flex before applying."
     },
     {
       "id": "checkout-com-manager-communications",
@@ -61,12 +33,13 @@
       "location": "London",
       "salary": { "min": null, "max": null, "published": false },
       "url": "https://jobs.ashbyhq.com/checkout.com/cb55c3a8-0975-4d2a-9d48-a6517ae787dd",
-      "fitScore": 4.0,
+      "fitScore": 3.0,
       "salaryClears": false,
+      "inHouse": true,
       "culture": { "glassdoor": 3.6, "notes": "Fintech in-house, fast-growing. Mixed Glassdoor reviews." },
       "status": "live",
       "verified": true,
-      "notes": "Fintech in-house comms at manager level. Published 2026-04-15, still live — 3 months open suggests negotiation room. No salary band published."
+      "notes": "Fintech in-house comms at manager level. 3 months open = negotiation room. No salary band. LOCATION PENALTY: London — confirm remote-flex for Manchester."
     },
     {
       "id": "checkout-com-senior-specialist-comms",
@@ -76,12 +49,13 @@
       "location": "London",
       "salary": { "min": null, "max": null, "published": false },
       "url": "https://jobs.ashbyhq.com/checkout.com/bb9a635a-b40d-4ba5-80ee-524746cf6aa6",
-      "fitScore": 3.0,
+      "fitScore": 2.0,
       "salaryClears": false,
+      "inHouse": true,
       "culture": { "glassdoor": 3.6, "notes": "Fintech in-house, fast-growing" },
       "status": "live",
       "verified": true,
-      "notes": "Likely below Claire's senior level (specialist band) but fresh (published 2026-07-13) and in-house fintech."
+      "notes": "Likely below Claire's senior level (specialist band) + London-based. Fresh (published 2026-07-13)."
     },
     {
       "id": "truelayer-uk-public-policy-lead",
@@ -91,12 +65,13 @@
       "location": "London (hybrid)",
       "salary": { "min": null, "max": null, "published": false },
       "url": "https://truelayer.com/careers",
-      "fitScore": 2.5,
+      "fitScore": 1.5,
       "salaryClears": false,
+      "inHouse": true,
       "culture": { "glassdoor": 3.8, "notes": "Open banking fintech, collaborative culture" },
       "status": "live",
       "verified": true,
-      "notes": "Adjacent to PR/comms — public policy rather than consumer PR. Interesting but off-profile."
+      "notes": "Adjacent to PR/comms — public policy rather than consumer PR. London-based. LOCATION PENALTY applied."
     }
   ],
   "unverified": [
@@ -110,6 +85,7 @@
       "url": null,
       "fitScore": null,
       "salaryClears": false,
+      "inHouse": true,
       "culture": {},
       "status": "unverified",
       "verified": false,
@@ -125,6 +101,7 @@
       "url": null,
       "fitScore": null,
       "salaryClears": false,
+      "inHouse": true,
       "culture": {},
       "status": "unverified",
       "verified": false,
@@ -140,6 +117,7 @@
       "url": null,
       "fitScore": null,
       "salaryClears": false,
+      "inHouse": true,
       "culture": {},
       "status": "unverified",
       "verified": false,
@@ -147,6 +125,22 @@
     }
   ],
   "dead": [],
+  "dropped": [
+    {
+      "id": "fight-or-flight-account-director",
+      "company": "Fight or Flight",
+      "title": "Account Director",
+      "level": "Senior",
+      "reason": "Agency role — Claire only wants in-house positions."
+    },
+    {
+      "id": "fight-or-flight-account-manager",
+      "company": "Fight or Flight",
+      "title": "Account Manager",
+      "level": "Mid",
+      "reason": "Agency role — Claire only wants in-house positions."
+    }
+  ],
   "checkedEmpty": [
     { "company": "Starling Bank", "detail": "No PR/comms roles open." },
     { "company": "Wise", "detail": "No PR/comms roles open." },
@@ -155,11 +149,11 @@
     { "company": "Atom Bank", "detail": "No PR/comms roles open." },
     { "company": "ClearBank", "detail": "No PR/comms roles open." },
     { "company": "Modulr", "detail": "No PR/comms roles open." },
-    { "company": "CCgroup", "detail": "No suitable openings." },
-    { "company": "Hard Numbers", "detail": "No suitable openings." },
-    { "company": "Eleven Hundred", "detail": "No suitable openings." },
-    { "company": "Missive", "detail": "No suitable openings." },
-    { "company": "Nelson Bostock", "detail": "Workable board live but zero open listings." },
-    { "company": "GoCardless", "detail": "36 live jobs on Greenhouse — no PR/comms roles. Marketing-adjacent only: Brand Designer, Performance Marketing Manager, Senior Product Marketing Manager." }
+    { "company": "CCgroup", "detail": "Agency — no suitable openings." },
+    { "company": "Hard Numbers", "detail": "Agency — no suitable openings." },
+    { "company": "Eleven Hundred", "detail": "Agency — no suitable openings." },
+    { "company": "Missive", "detail": "Agency — no suitable openings." },
+    { "company": "Nelson Bostock", "detail": "Agency — Workable board live but zero open listings." },
+    { "company": "GoCardless", "detail": "36 live jobs on Greenhouse — no PR/comms roles. Marketing-adjacent only." }
   ]
 }
